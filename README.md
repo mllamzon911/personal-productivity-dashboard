@@ -1,12 +1,34 @@
-# React + Vite
+# Personal Productivity Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This **Personal Productivity Dashboard** is a modern web application to help users manage their daily tasks, track focus time with a Pomodoro timer, organize their projects in a Kanban board, and take notes. The application is built using React.js and Tailwind CSS for styling.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **To-Do List**: Add, mark as complete, delete tasks, and track their estimated durations.
+- **Pomodoro Timer**: A customizable Pomodoro timer to help you focus, with short and long breaks.
+- **Kanban Board**: Manage tasks in a Kanban board with 3 columns: "To Do", "In Progress", and "Done".
+- **Notes**: Create, store, and delete notes.
+- **LocalStorage**: All data is saved in the browser's localStorage, so the data persists across sessions.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Tech Stack
+
+- **React.js**: For building the user interface.
+- **Tailwind CSS**: For fast and responsive styling.
+- **LocalStorage**: For saving user data.
+
+---
+
+## Getting Started
+
+Follow the steps below to get this app running on your local machine.
+
+### 1. Clone the Repository
+
+First, clone the repository to your local machine.
+
+```bash
+git clone https://github.com/mllamzon911/personal-productivity-dashboard.git
