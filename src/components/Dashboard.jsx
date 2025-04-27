@@ -8,34 +8,19 @@ const getTodayKey = () => {
   return new Date().toISOString().split('T')[0];
 };
 
-// Function to check localStorage for theme preference
-const getStoredTheme = () => {
-  if (typeof window !== 'undefined') {
-    return localStorage.getItem('theme');
-  }
-  return null;
-};
-
 function Dashboard() {
   const todayKey = getTodayKey();
   const [selectedDate, setSelectedDate] = useState(todayKey);
-  const [theme, setTheme] = useState(getStoredTheme() || 'light');
 
-  // Toggle dark mode
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-  };
-
-  // Apply the theme class to the body
-  useEffect(() => {
-    if (theme === 'dark') {
-      document.body.classList.add('dark');
-    } else {
-      document.body.classList.remove('dark');
+  // Function to clear all localStorage data
+  const clearLocalStorage = () => {
+    const confirmClear = window.confirm("Are you sure you want to delete all your data?");
+    if (confirmClear) {
+      localStorage.clear();
+      alert("All data has been cleared!");
+      window.location.reload(); // Reload the page after clearing data
     }
-  }, [theme]);
+  };
 
   // Read ALL LocalStorage data
   const allTasks = JSON.parse(localStorage.getItem('tasks')) || {};
@@ -64,8 +49,13 @@ function Dashboard() {
 
   return (
     <div className="flex flex-col items-center p-4">
-      {/* Dark Mode Toggle Button */}
-    
+      {/* Clear LocalStorage Button */}
+      <button
+        onClick={clearLocalStorage}
+        className="bg-red-500 text-white p-3 rounded-full mb-6"
+      >
+        Clear All Data
+      </button>
 
       {/* Date Selector */}
       <div className="w-full max-w-md mb-8">
