@@ -10,7 +10,6 @@ This **Personal Productivity Dashboard** is a modern web application to help use
 - **Pomodoro Timer**: A customizable Pomodoro timer to help you focus, with short and long breaks.
 - **Kanban Board**: Manage tasks in a Kanban board with 3 columns: "To Do", "In Progress", and "Done".
 - **Notes**: Create, store, and delete notes.
-- **LocalStorage**: All data is saved in the browser's localStorage, so the data persists across sessions.
 
 ---
 
@@ -19,6 +18,36 @@ This **Personal Productivity Dashboard** is a modern web application to help use
 - **React.js**: For building the user interface.
 - **Tailwind CSS**: For fast and responsive styling.
 - **LocalStorage**: For saving user data.
+
+```vbnet
+personal-productivity-dashboard/
+├── public/ 
+│   └── (assets like icons, favicon)
+├── src/
+│   ├── components/
+│   │   ├── Dashboard.jsx
+│   │   ├── Todo.jsx
+│   │   ├── KanbanBoard.jsx
+│   │   ├── Notes.jsx
+│   │   ├── PomodoroTimer.jsx
+│   ├── App.jsx
+│   ├── index.js
+│   ├── styles/
+│   │   └── App.css (optional custom styles)
+├── package.json
+├── .gitignore
+└── README.md
+```
+
+---
+
+## LocalStorage Data
+
+The app uses localStorage to persist the following data (All data is saved in the browser's localStorage, so the data persists across sessions.):
+- To-Do List: Tasks, their status, and duration.
+- Pomodoro Timer: The number of sessions completed.
+- Kanban Board: Projects and their status.
+- Notes: The notes created for each day.
 
 ---
 
