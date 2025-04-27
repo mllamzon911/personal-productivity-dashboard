@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f3f4f6; /* Tailwind's gray-100 */
+  margin: 0;
+  padding: 0;
+}
+
+/* In your global styles or index.css file */
+/* Smooth transition for background and color changes */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
